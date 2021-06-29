@@ -11,19 +11,25 @@ html{
     font-size: 62.5%;
 }
 body{
-    font-size: 1.6rem;
+    min-height: 100vh;
+    font-size: 1.8rem;
     font-family: 400;
     font-family: 'Roboto', sans-serif;
-    color: #333333;
+    color: #f6592e;
+    background: linear-gradient(to right top, #1f2229, #2d3037);
+    background-repeat: no-repeat;
 }
 .heading,
 .questionBox,
-.content{
+.content,
+.search,
+.search__input{
     padding: 1rem;
 }
 .heading{
     cursor: pointer;
     margin: 1rem auto;
+    color: #f6592e;
 }
 .container{
     width: 100%;
@@ -31,13 +37,14 @@ body{
     padding: 2rem;
     text-align: center;
 }
-.wrapper{
+.wrapper,
+.search{
     width: 70%;
     margin: 0 auto;
 }
 .questions{
-    border: 1px solid #e7e7e7;
     border-radius: .5rem;
+    background: #f6592e;
 }
 .questionBox{
     text-align: left;
@@ -45,7 +52,7 @@ body{
 .dropdown{
     width: 1.5rem;
     height: 1.5rem;
-    fill: #777;
+    fill: #2d3037;
     vertical-align: middle;
 }
 .dropdown,
@@ -56,11 +63,10 @@ body{
     padding: .5rem;
     font-weight: 500;
     cursor: pointer;
-    color: #777;
+    color: #2d3037;
 }
-
 .questionBox:not(:last-child){
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #fd653a;
 }
 .content{
     display: none;
@@ -68,13 +74,22 @@ body{
 .question.active + .content{
     display: block;
 }
-.question.active .dropdown{
-    fill: #333;
-}
+.question.active .dropdown,
 .question:hover .dropdown{
-    fill: #333;
+    fill: #1f2229;
 }
+.content,
 .question:hover,
 .question.active{
-    color: #333;
+    color: #1f2229;
+}
+.search__input{
+    width: 100%;
+    font-size: 1.6rem;
+    border: 1px solid #1f2229;
+    background: #2d3037;
+    color: #fff;
+}
+.search__input:focus-visible{
+    outline: 1px solid #f6592e;
 }
