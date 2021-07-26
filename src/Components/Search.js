@@ -18,6 +18,7 @@ const Search = () => {
     },[term]);
 
     useEffect(() => {
+        
         //fetch req and update term and setResults
         const findTerm = async () => {
 
